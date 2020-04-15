@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins; }
+
+body {
+  color: #fcfcfc;
+  background: #1b262c; }
+
+.nav-container {
+  display: flex;
+  padding: 1rem;
+  width: 100vw;
+  align-items: center;
+  position: fixed;
+  background: #1b262c;
+  z-index: 1; }
+  .nav-container ul {
+    margin-left: auto; }
+    .nav-container ul .hambar {
+      display: none; }
+  .nav-container h2 {
+    cursor: pointer;
+    color: #ed6663;
+    transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    letter-spacing: -1pt; }
+  .nav-container h2:hover {
+    animation: colorAnimate 1s both infinite alternate;
+    letter-spacing: 0.5rem; }
+
+@keyframes colorAnimate {
+  0% {
+    color: #ffa372; }
+  100% {
+    color: orangered; } }
+  .nav-container li {
+    list-style-type: none;
+    margin: 0px 2.5rem;
+    float: left;
+    padding: 2px;
+    transition: all 0.1s ease-in; }
+    .nav-container li:hover {
+      background-color: #ed6663; }
+  .nav-container a {
+    text-decoration: none;
+    color: #fcfcfc; }
+
+img {
+  object-fit: cover;
+  width: 60%;
+  height: 60%;
+  border: 2px solid #ffa372; }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 320px);
+  text-align: center; }
+
+.card {
+  position: relative; }
+  .card .middle {
+    transition: 0.2s ease-in;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #ed6663; }
+  .card img {
+    border-radius: 10px; }
+
+.card:hover .middle {
+  opacity: 1; }
+
+.card:hover img {
+  opacity: 0.5; }
+
+main {
+  width: 100%;
+  height: 60vh;
+  display: grid;
+  background: #1b262c; }
+  main .icons {
+    font-size: 25pt;
+    opacity: 0.1; }
+
+p {
+  margin: auto; }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, 320px); }
+  .nav-container ul {
+    margin: 0 20px; }
+  .nav-container li {
+    padding: 0;
+    margin: 0 6px; } }
